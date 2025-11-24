@@ -26,9 +26,9 @@ const data = [
 function Marquee() {
   const items = [...data, ...data];
 
-  return (
-    <div className="overflow-hidden bg-neutral-200 ">
-      <motion.div
+  return ( 
+    <div className="overflow-hidden bg-neutral-200 ml-[800px]">
+      <div
         className="flex gap-5  h-[100px]"
         style={{ width: "max-content", alignItems: "center" }}
         animate={{ x: ["0%", "-50%"] }}
@@ -39,7 +39,7 @@ function Marquee() {
             <img src={item.logo} width={120} style={{}} height={70} alt="" />
           </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }
