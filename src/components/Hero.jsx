@@ -22,10 +22,9 @@ function Hero() {
         <button className="bg-black rounded-3xl py-3 px-7  text-white font-md">
           Book a demo
         </button>
-        <button className="bg-white rounded-3xl py-3 px-7  text-black font-md">
+        <button className="bg-white rounded-3xl py-3 px-7 border-white border-2 shadow-2xl  text-black font-md">
           Send us an Email
         </button>
-        
       </div>
     </div>
   );
