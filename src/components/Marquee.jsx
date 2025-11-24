@@ -24,29 +24,19 @@ const data = [
 ];
 
 function Marquee() {
-  // duplicate items so the animated track can loop seamlessly
   const items = [...data, ...data];
 
   return (
-    <div className="overflow-hidden bg-neutral-200">
+    <div className="overflow-hidden ">
       <motion.div
-        className="flex gap-5 bg-neutral-200 h-[100px]"
+        className="flex gap-5  h-[100px]"
         style={{ width: "max-content", alignItems: "center" }}
         animate={{ x: ["0%", "-50%"] }}
         transition={{ ease: "linear", repeat: Infinity, duration: 12 }}
       >
-        {items.map((item, i) => (
-          <div key={`${item.id}-${i}`}>
-            <img
-              src={item.logo}
-              width={120}
-              style={{
-                filter: "grayscale(100%)",
-                opacity: "95%",
-              }}
-              height={70}
-              alt=""
-            />
+        {items.map((item, index) => (
+          <div key={index}>
+            <img src={item.logo} width={120} style={{}} height={70} alt="" />
           </div>
         ))}
       </motion.div>

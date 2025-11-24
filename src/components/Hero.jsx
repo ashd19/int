@@ -5,9 +5,8 @@ function Hero() {
     <div>
       <div className="mt-10">
         <h1 className="font-bold font-mono text-7xl leading-none tracking-tighter">
-          Your AI Copilot for a{" "}
+          Your AI Copilot for a
         </h1>{" "}
-        <br />
         <h1 className="font-bold font-mono text-7xl leading-none tracking-tighter">
           Fast,Audit-Ready Close
         </h1>
