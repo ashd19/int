@@ -27,7 +27,7 @@ function Marquee() {
   const items = [...data, ...data];
 
   return (
-    <div className="overflow-hidden ">
+    <div className="overflow-hidden bg-neutral-200 ">
       <motion.div
         className="flex gap-5  h-[100px]"
         style={{ width: "max-content", alignItems: "center" }}
