@@ -7,7 +7,7 @@ const data = [
   },
   {
     id: 2,
-    logo: "/public/ScaleAIlogo.svg",
+    logo: "/ScaleAIlogo.svg",
   },
   {
     id: 3,
@@ -24,28 +24,32 @@ const data = [
 ];
 
 function Marquee() {
-  motion;
+  // duplicate items so the animated track can loop seamlessly
+  const items = [...data, ...data];
+
   return (
-    <div>
-      <div className="flex gap-5">
-        {data.map((item, index) => (
-          <motion.div
-            initial={{ x: 0 }}
-            animate={{ x: "-100%" }}
-            transition={{ ease: "linear", repeat: Infinity, duration: 1 }}
-            key={index}
-          >
+    <div className="overflow-hidden bg-neutral-200">
+      <motion.div
+        className="flex gap-5 bg-neutral-200 h-[100px]"
+        style={{ width: "max-content", alignItems: "center" }}
+        animate={{ x: ["0%", "-50%"] }}
+        transition={{ ease: "linear", repeat: Infinity, duration: 12 }}
+      >
+        {items.map((item, i) => (
+          <div key={`${item.id}-${i}`}>
             <img
-              style={{}}
               src={item.logo}
-              className=""
               width={120}
+              style={{
+                filter: "grayscale(100%)",
+                opacity: "95%",
+              }}
               height={70}
               alt=""
-            ></img>
-          </motion.div>
+            />
+          </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
